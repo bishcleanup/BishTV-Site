@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>BishTV | Cable TV, Satellite, Internet & Home Phone</title>
+<link rel="icon" type="image/png" href="logo-small.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -31,7 +32,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 72px;
   background-color: var(--bg);
   color-scheme: dark;
 }
@@ -88,8 +89,8 @@ button, input, select, textarea { font-family: inherit; }
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 60px;
-  padding: 0 14px 0 22px;
+  height: 54px;
+  padding: 0 7px 0 16px;
   background: rgba(13, 17, 23, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -101,12 +102,9 @@ button, input, select, textarea { font-family: inherit; }
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
 }
+.brand-logo { display: block; height: 42px; width: auto; }
+.brand-logo.lg { height: 56px; }
 .brand-icon {
   width: 28px;
   height: 28px;
@@ -134,12 +132,12 @@ button, input, select, textarea { font-family: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 18px;
+  padding: 6px 16px;
   border-radius: 9999px;
   background: var(--accent);
   color: var(--accent-fg);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -153,7 +151,7 @@ button, input, select, textarea { font-family: inherit; }
   min-height: 84vh;
   display: flex;
   align-items: center;
-  padding-top: 140px;
+  padding-top: 120px;
   padding-bottom: 70px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
@@ -645,6 +643,9 @@ input::placeholder { color: var(--dim); }
 .submit-wrap { margin-top: 26px; }
 .form-legal { margin-top: 14px; font-size: 0.74rem; color: var(--dim); line-height: 1.5; }
 .form-legal a { color: var(--muted); text-decoration: underline; }
+.form-error { display: none; margin-top: 14px; padding: 12px 16px; border-radius: 12px; background: rgba(248, 113, 113, 0.1); border: 1px solid rgba(248, 113, 113, 0.4); color: #fca5a5; font-size: 0.88rem; line-height: 1.5; }
+.form-error a { text-decoration: underline; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
 /* SUCCESS SCREEN */
 .form-success { display: none; text-align: center; padding: 40px 10px; }
@@ -779,12 +780,10 @@ footer {
   .nav-wrap {
     top: max(6px, env(safe-area-inset-top));
   }
-  .nav-pill {
-    padding-top: 6px;
-  }
+  .brand-logo { height: 36px; }
   .nav-links { display: none; }
   .form-row-2, .form-row-3 { grid-template-columns: 1fr; }
-  .hero { padding-top: 110px; }
+  .hero { padding-top: 100px; }
   .starlink-notice { flex-direction: column; align-items: flex-start; }
 }
 </style>
@@ -797,11 +796,8 @@ footer {
 <div class="nav-wrap">
   <div class="nav-inner">
     <header class="nav-pill">
-      <a href="#" class="brand">
-        <div class="brand-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg>
-        </div>
-        <span>BishTV</span>
+      <a href="#" class="brand" aria-label="BishTV home">
+        <img class="brand-logo" src="logo-small.png" alt="BishTV" width="360" height="229">
       </a>
 
       <nav class="nav-links">
@@ -1086,6 +1082,7 @@ footer {
           </div>
 
           <form id="order-form" onsubmit="handleFormSubmit(event)">
+            <input type="text" name="_honey" id="cust-honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
             <!-- Services Checklist with Cable Internet and Satellite Internet -->
             <div class="form-group">
               <label>Select Services for Installation <span class="req">*</span></label>
@@ -1201,6 +1198,7 @@ footer {
               <p class="form-legal">
                 Submitting this form sends your request directly to our team at <a href="mailto:install@bish.stream">install@bish.stream</a>. We will reach out to confirm your installation window. No credit checks or upfront commitments.
               </p>
+              <div class="form-error" id="form-error" role="alert"></div>
             </div>
           </form>
         </div>
@@ -1210,7 +1208,7 @@ footer {
           <div class="success-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <h4>Request Emailed to Our Team!</h4>
+          <h4>Request Sent</h4>
           <p>
             Your installation details have been sent to <strong>install@bish.stream</strong>. A BishTV representative will contact you shortly to confirm your installation appointment.
           </p>
@@ -1307,11 +1305,8 @@ footer {
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="#" class="brand" style="margin-bottom: 8px;">
-          <div class="brand-icon">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg>
-          </div>
-          <span>BishTV</span>
+        <a href="#" class="brand" style="margin-bottom: 8px;" aria-label="BishTV home">
+          <img class="brand-logo lg" src="logo-small.png" alt="BishTV" width="360" height="229">
         </a>
         <p>Helping families save on cable TV, satellite TV, high-speed cable and satellite internet, and traditional home phone lines. We connect you with top companies for less.</p>
       </div>
@@ -1451,57 +1446,63 @@ footer {
   requestAnimationFrame(render);
 })();
 
-/* Form Submission Emailed Directly to install@bish.stream */
-function handleFormSubmit(event) {
+/* Form submission: posts to FormSubmit, which emails install@bish.stream */
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/install@bish.stream';
+
+async function handleFormSubmit(event) {
   event.preventDefault();
 
   const submitBtn = document.getElementById('submit-btn');
   const btnText = document.getElementById('btn-text');
-  
+  const errBox = document.getElementById('form-error');
+  errBox.style.display = 'none';
+
+  // Spam trap: real visitors never fill this hidden field.
+  if (document.getElementById('cust-honey').value) return;
+
   submitBtn.disabled = true;
-  btnText.textContent = "Emailing Your Request...";
+  btnText.textContent = 'Sending Your Request...';
 
   const checkedSvcs = Array.from(document.querySelectorAll('input[name="services"]:checked'))
     .map(cb => cb.value);
+  const val = id => document.getElementById(id).value.trim();
+  const ref = 'BST-' + Math.floor(100000 + Math.random() * 900000);
 
   const payload = {
-    name: document.getElementById('cust-name').value,
-    phone: document.getElementById('cust-phone').value,
-    email: document.getElementById('cust-email').value,
-    address: document.getElementById('cust-address').value,
-    city: document.getElementById('cust-city').value,
-    state: document.getElementById('cust-state').value,
-    zip: document.getElementById('cust-zip').value,
-    time: document.getElementById('cust-time').value,
-    property: document.getElementById('cust-property').value,
-    services: checkedSvcs.length > 0 ? checkedSvcs.join(', ') : 'All Bundle Options'
+    _subject: 'Installation Request [' + ref + '] - ' + val('cust-name'),
+    _template: 'table',
+    _captcha: 'false',
+    Ticket: ref,
+    Name: val('cust-name'),
+    Phone: val('cust-phone'),
+    Email: val('cust-email'),
+    Address: val('cust-address') + ', ' + val('cust-city') + ', ' + val('cust-state').toUpperCase() + ' ' + val('cust-zip'),
+    'Property Type': val('cust-property'),
+    'Best Time to Contact': val('cust-time'),
+    Services: checkedSvcs.length ? checkedSvcs.join(', ') : 'No service selected',
+    _replyto: val('cust-email')
   };
 
-  const randomRef = 'BST-' + Math.floor(100000 + Math.random() * 900000);
-
-  const subject = encodeURIComponent(`Installation Request [${randomRef}] - ${payload.name}`);
-  const bodyText = encodeURIComponent(
-    `New Installation Request:\n\n` +
-    `Ticket: ${randomRef}\n` +
-    `Name: ${payload.name}\n` +
-    `Phone: ${payload.phone}\n` +
-    `Email: ${payload.email}\n` +
-    `Address: ${payload.address}, ${payload.city}, ${payload.state} ${payload.zip}\n` +
-    `Property Type: ${payload.property}\n` +
-    `Preferred Time: ${payload.time}\n` +
-    `Services: ${payload.services}\n`
-  );
-
-  setTimeout(() => {
-    const mailtoUri = `mailto:install@bish.stream?subject=${subject}&body=${bodyText}`;
-    window.location.href = mailtoUri;
-
-    document.getElementById('ref-code').textContent = randomRef;
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || String(data.success) === 'false') {
+      throw new Error(data.message || ('HTTP ' + res.status));
+    }
+    document.getElementById('ref-code').textContent = ref;
     document.getElementById('form-container').style.display = 'none';
     document.getElementById('form-success').style.display = 'block';
-
-    console.info("Installation request emailed to install@bish.stream:", payload, "Ref:", randomRef);
-  }, 600);
+  } catch (err) {
+    errBox.innerHTML = 'We could not send your request. Please call <a href="tel:8774209628">(877) 420-9628</a> or email <a href="mailto:install@bish.stream">install@bish.stream</a>.';
+    errBox.style.display = 'block';
+    submitBtn.disabled = false;
+    btnText.textContent = 'Get Installed';
+    console.error('Form submission failed:', err);
+  }
 }
 
 function resetForm() {
@@ -1511,6 +1512,7 @@ function resetForm() {
   const submitBtn = document.getElementById('submit-btn');
   submitBtn.disabled = false;
   document.getElementById('btn-text').textContent = "Get Installed";
+  document.getElementById('form-error').style.display = 'none';
 }
 </script>
 
