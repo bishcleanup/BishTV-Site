@@ -675,53 +675,6 @@ input::placeholder { color: var(--dim); }
 }
 .ref-box span { color: var(--accent); font-weight: 600; }
 
-/* TESTIMONIALS */
-.testimonials { padding: 88px 0; border-top: 1px solid var(--line); }
-.quotes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-.quote-card {
-  background: var(--panel);
-  border: 1px solid var(--panel-border);
-  border-radius: 20px;
-  padding: 26px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 18px;
-}
-.quote-stars { color: var(--accent); display: flex; gap: 4px; }
-.quote-card blockquote { font-size: 0.96rem; color: var(--fg); line-height: 1.6; }
-.quote-author { display: flex; align-items: center; gap: 12px; }
-.author-avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--line);
-  display: grid;
-  place-content: center;
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  color: var(--accent);
-}
-.author-meta .name { font-size: 0.9rem; font-weight: 500; }
-.author-meta .loc { font-family: var(--font-mono); font-size: 0.7rem; color: var(--dim); }
-
-/* FAQ */
-.faq-section { padding: 80px 0; border-top: 1px solid var(--line); }
-.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
-.faq-item {
-  background: var(--panel);
-  border: 1px solid var(--panel-border);
-  border-radius: 16px;
-  padding: 24px;
-}
-.faq-item h5 { font-size: 1.05rem; font-weight: 500; margin-bottom: 10px; color: var(--fg); }
-.faq-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-
 /* FOOTER */
 footer {
   border-top: 1px solid var(--line);
@@ -773,7 +726,6 @@ footer {
   .install-grid { grid-template-columns: 1fr; }
   .info-sidebar { position: static; }
   .footer-top { grid-template-columns: 1fr; gap: 36px; }
-  .faq-grid { grid-template-columns: 1fr; }
   .hero-specs { grid-template-columns: 1fr 1fr; }
 }
 
@@ -809,7 +761,6 @@ footer {
         <a href="#why">Why Us</a>
         <a href="#services">Services</a>
         <a href="#bundles">Bundles</a>
-        <a href="#faq">FAQ</a>
       </nav>
 
       <a href="#install" class="nav-cta">
@@ -1228,83 +1179,6 @@ footer {
   </div>
 </section>
 
-<!-- REVIEWS -->
-<section class="testimonials">
-  <div class="wrap">
-    <div class="sec-tag">Customer Reviews</div>
-    <h2 class="sec-title">What real customers say</h2>
-    <p class="sec-desc">See how much our customers are saving every month on their home bills.</p>
-
-    <div class="quotes-grid">
-      <div class="quote-card">
-        <div class="quote-stars">★★★★★</div>
-        <blockquote>"Switching with BishTV cut over $100 off my monthly bill. My cable internet is super fast and getting installed was completely painless."</blockquote>
-        <div class="quote-author">
-          <div class="author-avatar">JW</div>
-          <div class="author-meta">
-            <div class="name">James Wilson</div>
-            <div class="loc">Cable Internet &amp; TV Customer</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="quote-card">
-        <div class="quote-stars">★★★★★</div>
-        <blockquote>"Their team helped us get satellite TV and satellite internet installed without any fuss. The customer service answered all my questions right away."</blockquote>
-        <div class="quote-author">
-          <div class="author-avatar">SJ</div>
-          <div class="author-meta">
-            <div class="name">Sarah Jenkins</div>
-            <div class="loc">Satellite TV Customer</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="quote-card">
-        <div class="quote-stars">★★★★★</div>
-        <blockquote>"No surprise fees, no credit check, and my home phone is crystal clear. BishTV made everything so easy to understand."</blockquote>
-        <div class="quote-author">
-          <div class="author-avatar">RM</div>
-          <div class="author-meta">
-            <div class="name">Robert Miller</div>
-            <div class="loc">Triple Bundle Customer</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-section" id="faq">
-  <div class="wrap">
-    <div class="sec-tag">Got Questions?</div>
-    <h2 class="sec-title">Frequently Asked Questions</h2>
-
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h5>How does BishTV save me money?</h5>
-        <p>We work directly with the major cable and satellite companies across the country. We know where the current promotions and bundle discounts are, so you get the best price available.</p>
-      </div>
-
-      <div class="faq-item">
-        <h5>Do you really skip credit checks and long contracts?</h5>
-        <p>Yes! We focus on easy-to-start services that do not require hard credit checks, surprise deposits, or long-term binding agreements.</p>
-      </div>
-
-      <div class="faq-item">
-        <h5>What kind of home phone service is this?</h5>
-        <p>We provide traditional home phone service, not internet VoIP. It includes unlimited local and long-distance calling and works like a standard landline.</p>
-      </div>
-
-      <div class="faq-item">
-        <h5>Is Starlink included in the bundle?</h5>
-        <p>No. Starlink is a separate, paid upgrade for customers who live in rural places and want fast satellite internet. If you want Starlink, we can help you order and set it up for an extra charge.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
@@ -1323,7 +1197,6 @@ footer {
           <li><a href="#services">Our Services</a></li>
           <li><a href="#bundles">Bundle Discounts</a></li>
           <li><a href="#install">Get Installed</a></li>
-          <li><a href="#faq">Questions &amp; Answers</a></li>
         </ul>
       </div>
 
