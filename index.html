@@ -358,7 +358,7 @@ h1 em {
 }
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
 .card {
@@ -407,7 +407,7 @@ h1 em {
 /* SERVICES */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
 .service-box {
@@ -727,6 +727,10 @@ footer {
   .info-sidebar { position: static; }
   .footer-top { grid-template-columns: 1fr; gap: 36px; }
   .hero-specs { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+  .grid-3, .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 700px) {
