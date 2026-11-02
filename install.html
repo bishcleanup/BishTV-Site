@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get Installed | BishTV</title>
+<meta name="description" content="Request cable, satellite, internet or home phone installation from BishTV.">
+<link rel="icon" type="image/png" href="logo-small.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise" aria-hidden="true"></div>
+
+<!-- NAVIGATION -->
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <header class="nav-pill">
+      <a href="index.html" class="brand" aria-label="BishTV home">
+        <img class="brand-logo" src="logo-small.png" alt="BishTV" width="360" height="229">
+      </a>
+
+      <nav class="nav-links">
+        <a href="why.html">Why Us</a>
+        <a href="services.html">Services</a>
+        <a href="services.html#bundles">Bundles</a>
+      </nav>
+
+      <a href="install.html" class="nav-cta">
+        <span>Get Installed</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </header>
+  </div>
+</div>
+
+<!-- GET INSTALLED FORM -->
+<section class="install-section page-top" id="install">
+  <div class="wrap">
+    <div class="install-grid">
+      <!-- Left Info -->
+      <div class="info-sidebar">
+        <div class="sec-tag">Direct Scheduling</div>
+        <h2 style="font-size: 2.2rem; font-weight: 300; line-height: 1.2; margin-bottom: 14px;">Get Installed</h2>
+        <p style="color: var(--muted); font-size: 0.98rem; line-height: 1.6;">
+          Fill out the form below. Your request goes directly to our installation team at <strong style="color:var(--fg);">install@bish.stream</strong>. We will review your service area and contact you to schedule your home setup.
+        </p>
+
+        <div class="contact-callout">
+          <div class="callout-row">
+            <div class="callout-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="callout-meta">
+              <div class="label">Call Our Office</div>
+              <div class="val"><a href="tel:8774209628">(877) 420-9628</a></div>
+            </div>
+          </div>
+
+          <div class="callout-row">
+            <div class="callout-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div class="callout-meta">
+              <div class="label">Direct Email</div>
+              <div class="val"><a href="mailto:install@bish.stream">install@bish.stream</a></div>
+            </div>
+          </div>
+
+          <div class="callout-row">
+            <div class="callout-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="callout-meta">
+              <div class="label">Request Callback</div>
+              <div class="val">Fast response</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Form -->
+      <div class="form-shell">
+        <div id="form-container">
+          <div class="form-header">
+            <h3>Installation Request Form</h3>
+            <p>Tell us what you need and our team will get your installation arranged.</p>
+          </div>
+
+          <form id="order-form" onsubmit="handleFormSubmit(event)">
+            <input type="text" name="_honey" id="cust-honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <!-- Services Checklist with Cable Internet and Satellite Internet -->
+            <div class="form-group">
+              <label>Select Services for Installation <span class="req">*</span></label>
+              <div class="service-selector">
+                <div class="svc-chip">
+                  <input type="checkbox" id="svc-cable" name="services" value="Cable TV">
+                  <label for="svc-cable">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                    <span>Cable TV</span>
+                  </label>
+                </div>
+                <div class="svc-chip">
+                  <input type="checkbox" id="svc-satellite" name="services" value="Satellite TV">
+                  <label for="svc-satellite">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+                    <span>Satellite TV</span>
+                  </label>
+                </div>
+                <div class="svc-chip">
+                  <input type="checkbox" id="svc-cable-net" name="services" value="Cable Internet" checked>
+                  <label for="svc-cable-net">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                    <span>Cable Internet</span>
+                  </label>
+                </div>
+                <div class="svc-chip">
+                  <input type="checkbox" id="svc-sat-net" name="services" value="Satellite Internet">
+                  <label for="svc-sat-net">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+                    <span>Satellite Internet</span>
+                  </label>
+                </div>
+                <div class="svc-chip">
+                  <input type="checkbox" id="svc-phone" name="services" value="Traditional Home Phone">
+                  <label for="svc-phone">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>Home Phone</span>
+                  </label>
+                </div>
+                <div class="svc-chip">
+                  <input type="checkbox" id="svc-starlink" name="services" value="Starlink Setup (Paid Upgrade)">
+                  <label for="svc-starlink">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+                    <span>Starlink (Upgrade)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Inputs -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="cust-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="cust-name" placeholder="John Smith" required>
+              </div>
+              <div class="form-group">
+                <label for="cust-phone">Phone Number <span class="req">*</span></label>
+                <input type="tel" id="cust-phone" placeholder="(555) 000-0000" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cust-email">Email Address <span class="req">*</span></label>
+              <input type="email" id="cust-email" placeholder="john@example.com" required>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+              <label for="cust-address">Installation Street Address <span class="req">*</span></label>
+              <input type="text" id="cust-address" placeholder="123 Main Street" required>
+            </div>
+
+            <div class="form-row-3">
+              <div class="form-group">
+                <label for="cust-city">City <span class="req">*</span></label>
+                <input type="text" id="cust-city" placeholder="Dallas" required>
+              </div>
+              <div class="form-group">
+                <label for="cust-state">State <span class="req">*</span></label>
+                <input type="text" id="cust-state" placeholder="TX" maxlength="2" required style="text-transform: uppercase;">
+              </div>
+              <div class="form-group">
+                <label for="cust-zip">Zip Code <span class="req">*</span></label>
+                <input type="text" id="cust-zip" placeholder="75001" maxlength="5" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="cust-time">Best Time to Contact You</label>
+                <select id="cust-time">
+                  <option value="Anytime during business hours">Anytime during business hours</option>
+                  <option value="Morning (9AM - 12PM PST)">Morning (9AM - 12PM PST)</option>
+                  <option value="Afternoon (12PM - 5PM PST)">Afternoon (12PM - 5PM PST)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cust-property">Property Type</label>
+                <select id="cust-property">
+                  <option value="House / Single Family">House / Single Family</option>
+                  <option value="Apartment / Condo">Apartment / Condo</option>
+                  <option value="Rural / Farm / Acreage">Rural / Farm / Acreage</option>
+                  <option value="Business / Office">Business / Office</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="submit-wrap">
+              <button type="submit" class="btn-primary" id="submit-btn" style="width: 100%;">
+                <span id="btn-text">Get Installed</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <p class="form-legal">
+                Submitting this form sends your request directly to our team at <a href="mailto:install@bish.stream">install@bish.stream</a>. We will reach out to confirm your installation window. No credit checks or upfront commitments.
+              </p>
+              <div class="form-error" id="form-error" role="alert"></div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Success Result -->
+        <div class="form-success" id="form-success">
+          <div class="success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Request Sent</h4>
+          <p>
+            Your installation details have been sent to <strong>install@bish.stream</strong>. A BishTV representative will contact you shortly to confirm your installation appointment.
+          </p>
+          <div class="ref-box">
+            Installation Ticket: <span id="ref-code">BST-123456</span><br>
+            Sent To: <span>install@bish.stream</span>
+          </div>
+          <button type="button" class="btn-secondary" onclick="resetForm()">Submit Another Request</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="margin-bottom: 8px;" aria-label="BishTV home">
+          <img class="brand-logo lg" src="logo-small.png" alt="BishTV" width="360" height="229">
+        </a>
+        <p>Helping families save on cable TV, satellite TV, high-speed cable and satellite internet, and traditional home phone lines. We connect you with top companies for less.</p>
+      </div>
+
+      <div class="footer-col">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="why.html">Why Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="services.html#bundles">Bundle Discounts</a></li>
+          <li><a href="install.html">Get Installed</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h6>Contact BishTV</h6>
+        <ul>
+          <li><strong style="color:var(--fg);">(877) 420-9628</strong></li>
+          <li><a href="mailto:install@bish.stream">install@bish.stream</a></li>
+          <li><span style="color:var(--dim); font-size:0.85rem;">7 Days a Week: 9:00 AM - 5:00 PM PST</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copy">
+        &copy; 2026 BishTV Stream. All rights reserved. For customer questions, contact <a href="mailto:install@bish.stream" style="color:var(--muted); text-decoration: underline;">install@bish.stream</a>.
+      </div>
+      <div class="sec-meta">
+        [ BISHTV // FAST INSTALLATION ]
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* Form submission: posts to FormSubmit, which emails install@bish.stream */
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/install@bish.stream';
+
+async function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const submitBtn = document.getElementById('submit-btn');
+  const btnText = document.getElementById('btn-text');
+  const errBox = document.getElementById('form-error');
+  errBox.style.display = 'none';
+
+  // Spam trap: real visitors never fill this hidden field.
+  if (document.getElementById('cust-honey').value) return;
+
+  submitBtn.disabled = true;
+  btnText.textContent = 'Sending Your Request...';
+
+  const checkedSvcs = Array.from(document.querySelectorAll('input[name="services"]:checked'))
+    .map(cb => cb.value);
+  const val = id => document.getElementById(id).value.trim();
+  const ref = 'BST-' + Math.floor(100000 + Math.random() * 900000);
+
+  const payload = {
+    _subject: 'Installation Request [' + ref + '] - ' + val('cust-name'),
+    _template: 'table',
+    _captcha: 'false',
+    Ticket: ref,
+    Name: val('cust-name'),
+    Phone: val('cust-phone'),
+    Email: val('cust-email'),
+    Address: val('cust-address') + ', ' + val('cust-city') + ', ' + val('cust-state').toUpperCase() + ' ' + val('cust-zip'),
+    'Property Type': val('cust-property'),
+    'Best Time to Contact': val('cust-time'),
+    Services: checkedSvcs.length ? checkedSvcs.join(', ') : 'No service selected',
+    _replyto: val('cust-email')
+  };
+
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || String(data.success) === 'false') {
+      throw new Error(data.message || ('HTTP ' + res.status));
+    }
+    document.getElementById('ref-code').textContent = ref;
+    document.getElementById('form-container').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  } catch (err) {
+    errBox.innerHTML = 'We could not send your request. Please call <a href="tel:8774209628">(877) 420-9628</a> or email <a href="mailto:install@bish.stream">install@bish.stream</a>.';
+    errBox.style.display = 'block';
+    submitBtn.disabled = false;
+    btnText.textContent = 'Get Installed';
+    console.error('Form submission failed:', err);
+  }
+}
+
+function resetForm() {
+  document.getElementById('order-form').reset();
+  document.getElementById('form-container').style.display = 'block';
+  document.getElementById('form-success').style.display = 'none';
+  const submitBtn = document.getElementById('submit-btn');
+  submitBtn.disabled = false;
+  document.getElementById('btn-text').textContent = "Get Installed";
+  document.getElementById('form-error').style.display = 'none';
+}
+</script>
+</body>
+</html>
