@@ -351,11 +351,13 @@ async function handleFormSubmit(event) {
     document.getElementById('form-container').style.display = 'none';
     document.getElementById('form-success').style.display = 'block';
   } catch (err) {
-    errBox.innerHTML = 'We could not send your request. Please call <a href="tel:8774209628">(877) 420-9628</a> or email <a href="mailto:install@bish.stream">install@bish.stream</a>.';
+    const lines = Object.keys(payload).filter(k => k.charAt(0) !== '_').map(k => k + ': ' + payload[k]).join('\n');
+    const mailto = 'mailto:install@bish.stream?subject=' + encodeURIComponent(payload._subject) + '&body=' + encodeURIComponent(lines);
+    errBox.innerHTML = 'We could not send your request automatically. <a href="' + mailto + '">Send it from your email app</a>, or call <a href="tel:8774209628">(877) 420-9628</a>.';
     errBox.style.display = 'block';
     submitBtn.disabled = false;
     btnText.textContent = 'Get Installed';
-    console.error('Form submission failed:', err);
+    console.error('Form submission failed:', err && err.message ? err.message : err);
   }
 }
 
