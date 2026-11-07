@@ -346,6 +346,8 @@ async function handleFormSubmit(event) {
       throw new Error(data.message || ('HTTP ' + res.status));
     }
     document.getElementById('ref-code').textContent = ref;
+    // Event snippet for Contact conversion page: fires only after the request is sent
+    try { gtag('event', 'conversion', {'send_to': 'AW-18550272135/SgenCIDd9rMdEIfhuo1F'}); } catch (e) {}
     document.getElementById('form-container').style.display = 'none';
     document.getElementById('form-success').style.display = 'block';
   } catch (err) {
