@@ -298,8 +298,9 @@
 
 
 <script>
-/* Form submission: posts to FormSubmit, which emails install@bish.stream */
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/install@bish.stream';
+/* Form submission: posts to Web3Forms, which emails install@bish.stream */
+const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+const WEB3FORMS_ACCESS_KEY = 'PASTE_ACCESS_KEY_HERE';
 
 async function handleFormSubmit(event) {
   event.preventDefault();
@@ -321,9 +322,10 @@ async function handleFormSubmit(event) {
   const ref = 'BST-' + Math.floor(100000 + Math.random() * 900000);
 
   const payload = {
-    _subject: 'Installation Request [' + ref + '] - ' + val('cust-name'),
-    _template: 'table',
-    _captcha: 'false',
+    access_key: WEB3FORMS_ACCESS_KEY,
+    subject: 'Installation Request [' + ref + '] - ' + val('cust-name'),
+    from_name: 'BishTV Website',
+    replyto: val('cust-email'),
     Ticket: ref,
     Name: val('cust-name'),
     Phone: val('cust-phone'),
@@ -331,8 +333,7 @@ async function handleFormSubmit(event) {
     Address: val('cust-address') + ', ' + val('cust-city') + ', ' + val('cust-state').toUpperCase() + ' ' + val('cust-zip'),
     'Property Type': val('cust-property'),
     'Best Time to Contact': val('cust-time'),
-    Services: checkedSvcs.length ? checkedSvcs.join(', ') : 'No service selected',
-    _replyto: val('cust-email')
+    Services: checkedSvcs.length ? checkedSvcs.join(', ') : 'No service selected'
   };
 
   try {
@@ -342,7 +343,7 @@ async function handleFormSubmit(event) {
       body: JSON.stringify(payload)
     });
     const data = await res.json().catch(() => ({}));
-    if (!res.ok || String(data.success) === 'false') {
+    if (!res.ok || data.success !== true) {
       throw new Error(data.message || ('HTTP ' + res.status));
     }
     document.getElementById('ref-code').textContent = ref;
@@ -351,8 +352,8 @@ async function handleFormSubmit(event) {
     document.getElementById('form-container').style.display = 'none';
     document.getElementById('form-success').style.display = 'block';
   } catch (err) {
-    const lines = Object.keys(payload).filter(k => k.charAt(0) !== '_').map(k => k + ': ' + payload[k]).join('\n');
-    const mailto = 'mailto:install@bish.stream?subject=' + encodeURIComponent(payload._subject) + '&body=' + encodeURIComponent(lines);
+    const lines = Object.keys(payload).filter(k => ['access_key','subject','from_name','replyto'].indexOf(k) === -1).map(k => k + ': ' + payload[k]).join('\n');
+    const mailto = 'mailto:install@bish.stream?subject=' + encodeURIComponent(payload.subject) + '&body=' + encodeURIComponent(lines);
     errBox.innerHTML = 'We could not send your request automatically. <a href="' + mailto + '">Send it from your email app</a>, or call <a href="tel:8774209628">(877) 420-9628</a>.';
     errBox.style.display = 'block';
     submitBtn.disabled = false;
