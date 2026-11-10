@@ -1,6 +1,6 @@
 # Resume site: resume.bishcleanup.com
 
-Styled to match bishcleanup.com (Archivo + Source Sans 3, forest green #1f7a4d, Bish Cleanup logo).
+Styled to match the Bish Cleanup app at bishcleanup.com: Bricolage Grotesque + Figtree, emerald #047857 with lime #ccff00, star mark, light/dark toggle.
 
 - `public/index.html`: the interactive resume website.
 - `public/one-page.html`: the 1-page print layout used for the PDF.

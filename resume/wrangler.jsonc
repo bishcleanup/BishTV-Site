@@ -4,7 +4,7 @@
   "compatibility_date": "2026-10-01",
   "rules": [
     { "type": "Text", "globs": ["**/*.html", "**/*.vcf", "**/*.txt"], "fallthrough": true },
-    { "type": "Data", "globs": ["**/*.pdf", "**/*.png"], "fallthrough": true }
+    { "type": "Data", "globs": ["**/*.pdf"], "fallthrough": true }
   ],
   "routes": [{ "pattern": "resume.bishcleanup.com", "custom_domain": true }],
   "workers_dev": false

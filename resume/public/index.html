@@ -11,12 +11,11 @@
 <meta property="og:title" content="Bob Bishop | Property & Operations Manager">
 <meta property="og:description" content="9+ years in residential property management, team leadership and day-to-day operations.">
 <meta property="og:url" content="https://resume.bishcleanup.com/">
-<meta name="theme-color" content="#1f7a4d">
-<link rel="icon" type="image/png" href="bish-mark.png">
-<link rel="apple-touch-icon" href="bish-mark.png">
+<meta name="theme-color" content="#047857">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%23047857'/%3E%3Cpath d='M24 7l3.4 10.2L38 20.5l-10.6 3.3L24 34l-3.4-10.2L10 20.5l10.6-3.3z' fill='%23fff'/%3E%3Cpath d='M38 5l1.3 3.7L43 10l-3.7 1.3L38 15l-1.3-3.7L33 10l3.7-1.3z' fill='%23cf0'/%3E%3Cpath d='M9 41c9-4 21-4 30 0' stroke='%23cf0' stroke-width='3.2' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,280 +30,263 @@
 }
 </script>
 <style>
-/* Theme matches bishcleanup.com: sage background, forest green accent, Archivo + Source Sans 3 */
-:root {
-  --accent: #1f7a4d;
-  --accent-dark: #165c39;
-  --accent-soft: #e6f2eb;
-  --lime: #d8f31a;
-  --ink: #1c2420;
-  --ink-soft: #4a5750;
-  --muted: #64716a;
-  --bg: #f6f7f4;
-  --card: #ffffff;
-  --surface-2: #f1f4ef;
-  --border: #dde3dc;
-  --font-head: "Archivo", system-ui, sans-serif;
-  --font-body: "Source Sans 3", system-ui, sans-serif;
-  --radius: 14px;
-  --radius-sm: 9px;
-  --max: 1120px;
-  --nav-h: 64px;
-  color-scheme: light;
+/* Theme matches the Bish Cleanup app (bishcleanup.com): Bricolage Grotesque + Figtree, emerald + lime */
+:root{
+  --bg:#f2f6f3; --surface:#ffffff; --surface2:#e8efea; --line:#d3ddd6; --fg:#0e1a14; --muted:#56675d;
+  --brand:#047857; --brand-ink:#ffffff; --brand-text:#047857; --brand-soft:#d6f0e3;
+  --lime:#ccff00; --lime-ink:#10200a; --hero:#07281c;
+  --shadow:0 1px 2px rgba(10,30,20,.06),0 10px 28px rgba(10,30,20,.07);
+  --font-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --font-body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --max:860px;
+  color-scheme:light;
 }
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.55; color: var(--ink); background: var(--bg); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-a { color: var(--accent-dark); }
-h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; letter-spacing: -0.01em; }
-.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 16px; }
-.btn:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid #f2b705; outline-offset: 2px; }
-
-/* Nav (floating pill, like bishcleanup.com) */
-.topbar {
-  position: fixed; top: 12px; left: 50%; transform: translateX(-50%); z-index: 50;
-  width: calc(100% - 24px); max-width: var(--max);
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  min-height: var(--nav-h); padding: 0.5rem 0.6rem 0.5rem 0.75rem;
-  background: rgba(255,255,255,0.94); backdrop-filter: blur(8px);
-  border: 1px solid var(--border); border-radius: 999px; box-shadow: 0 6px 22px rgba(28,36,32,0.08);
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#09100c; --surface:#111a15; --surface2:#1a2720; --line:#26372d; --fg:#e7f0ea; --muted:#95aa9d;
+    --brand-text:#3ddc97; --brand-soft:#0f2e22; --hero:#0d2a1f;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35); color-scheme:dark;
+  }
 }
-.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-family: var(--font-head); font-weight: 800; font-size: 1.1rem; white-space: nowrap; }
-.brand img { width: 34px; height: 34px; border-radius: 8px; display: block; }
-.nav { display: flex; gap: 0.25rem; overflow-x: auto; scrollbar-width: none; }
-.nav::-webkit-scrollbar { display: none; }
-.nav a { display: block; padding: 0.45rem 0.9rem; border-radius: 999px; text-decoration: none; color: var(--ink-soft); font-weight: 600; white-space: nowrap; transition: background .15s, color .15s; }
-.nav a:hover, .nav a.active { background: var(--accent-soft); color: var(--accent-dark); }
-
-/* Buttons */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  font-family: var(--font-head); font-weight: 700; font-size: 1rem;
-  padding: 0.8rem 1.35rem; border-radius: 999px; border: 2px solid var(--accent);
-  background: var(--accent); color: #fff; text-decoration: none; cursor: pointer;
-  transition: background .15s, color .15s, transform .15s, box-shadow .15s;
+:root[data-theme="dark"]{
+  --bg:#09100c; --surface:#111a15; --surface2:#1a2720; --line:#26372d; --fg:#e7f0ea; --muted:#95aa9d;
+  --brand-text:#3ddc97; --brand-soft:#0f2e22; --hero:#0d2a1f;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35); color-scheme:dark;
 }
-.btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(31,122,77,0.22); }
-.btn-ghost { background: transparent; color: var(--accent-dark); }
-.btn-ghost:hover { background: var(--accent-soft); color: var(--accent-dark); box-shadow: none; }
-.btn-sm { padding: 0.5rem 1rem; font-size: 0.93rem; }
-.btn svg { width: 18px; height: 18px; }
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+a{color:var(--brand-text)}
+:focus-visible{outline:2px solid var(--brand-text);outline-offset:2px}
+.ic{width:18px;height:18px;flex:none}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 16px}
 
-/* Hero */
-.hero { padding: calc(var(--nav-h) + 3.5rem) 0 0; }
-.eyebrow { font-family: var(--font-head); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-dark); margin: 0 0 0.5rem; }
-.hero h1 { font-size: clamp(2.6rem, 7vw, 4.2rem); font-weight: 800; margin: 0 0 0.75rem; letter-spacing: -0.02em; }
-.hero h1 .hl { background: linear-gradient(transparent 62%, var(--lime) 62%, var(--lime) 92%, transparent 92%); padding: 0 .08em; }
-.hero .lede { font-size: 1.15rem; color: var(--ink-soft); max-width: 62ch; margin: 0 0 1.5rem; }
-.contact { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
-.chip-link { display: inline-flex; align-items: center; gap: 8px; padding: 0.45rem 0.95rem; border-radius: 999px; background: var(--card); border: 1px solid var(--border); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.97rem; }
-a.chip-link:hover { border-color: var(--accent); color: var(--accent-dark); }
-.chip-link svg { width: 16px; height: 16px; color: var(--accent); }
-.cta { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+/* header */
+.top{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg)}
+.mark{width:36px;height:36px;flex:none}
+.wm{font-family:var(--font-display);font-weight:800;font-size:21px;letter-spacing:-.02em;line-height:1}
+.wm em{font-style:normal;font-weight:600;color:var(--brand-text);margin-left:4px}
+.top-r{display:flex;align-items:center;gap:8px}
+.icon-btn{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--surface2);cursor:pointer;color:var(--fg);text-decoration:none}
+.icon-btn:hover{border-color:var(--brand-text)}
+.avatar{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;border:2px solid var(--brand-text);background:var(--brand);color:#fff;font-family:var(--font-display);font-weight:800;text-decoration:none;font-size:15px}
 
-/* Fact cards */
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2.5rem; }
-.stat { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.25rem; }
-.stat b { display: block; font-family: var(--font-head); font-size: 1.3rem; line-height: 1.2; color: var(--accent-dark); }
-.stat span { color: var(--ink-soft); font-size: 0.97rem; }
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:14px;border:1px solid var(--line);background:var(--surface2);font-family:var(--font-body);font-weight:700;font-size:15px;cursor:pointer;text-decoration:none;color:var(--fg);min-height:48px;line-height:1.2}
+.btn:hover{border-color:var(--brand-text)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.lime{background:var(--lime);border-color:var(--lime);color:var(--lime-ink)}
+.btn.lime:hover{filter:brightness(1.05)}
+.btn.ghost{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
+.btn.ghost:hover{border-color:var(--lime)}
 
-/* Sections */
-section.block { padding: 2.5rem 0 0; scroll-margin-top: calc(var(--nav-h) + 24px); }
-.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 1rem; }
-h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); font-weight: 700; margin: 0; }
-h2 .num { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--accent-soft); color: var(--accent-dark); font-size: 0.85rem; font-weight: 800; margin-right: 10px; vertical-align: 4px; }
-.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; transition: border-color .15s, box-shadow .15s, transform .15s; }
-.summary { border-left: 4px solid var(--accent); }
-.summary p { margin: 0; font-size: 1.1rem; color: var(--ink-soft); }
+/* hero card */
+main{padding:20px 0 120px}
+.hero{position:relative;overflow:hidden;border-radius:26px;padding:32px 28px;background:var(--hero);color:#fff}
+.hero svg.art{position:absolute;right:-40px;top:-40px;width:260px;height:260px;opacity:.9;pointer-events:none}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-text);margin:0 0 6px}
+.hero .eyebrow{color:var(--lime);position:relative}
+.hero h1{position:relative;font-size:clamp(38px,8vw,56px);font-weight:800;line-height:1.02;margin:0 0 12px;color:#fff}
+.hero h1 .lime{color:var(--lime)}
+.hero .lede{position:relative;color:#bfe6d3;font-size:18px;max-width:46ch;margin:0 0 20px}
+.contact{position:relative;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip-link{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#e7f0ea;text-decoration:none;font-weight:600;font-size:14px}
+a.chip-link:hover{border-color:var(--lime);color:#fff}
+.chip-link svg{width:16px;height:16px;color:var(--lime)}
+.cta{position:relative;display:flex;flex-wrap:wrap;gap:10px}
 
-/* Skills */
-.skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-.skill-group h3 { margin: 0 0 0.75rem; font-size: 1.12rem; display: flex; align-items: center; gap: 10px; }
-.skill-group h3 .dot { width: 10px; height: 10px; border-radius: 3px; background: var(--accent); }
-.tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tag { font-size: 0.9rem; padding: 3px 11px; border-radius: 999px; background: var(--surface-2); color: var(--ink-soft); border: 1px solid var(--border); }
-.tag.key { background: var(--accent-soft); color: var(--accent-dark); border-color: transparent; font-weight: 700; }
+/* fact cards */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+.tile{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--brand-soft);color:var(--brand-text);margin-bottom:12px}
+.tile svg{width:20px;height:20px}
+.stat b{display:block;font-family:var(--font-display);font-weight:800;font-size:19px;line-height:1.2}
+.stat span{color:var(--muted);font-size:14px}
 
-/* Filters */
-.filters { display: flex; flex-wrap: wrap; gap: 6px; }
-.filter { font-family: var(--font-head); font-size: 0.88rem; font-weight: 700; padding: 0.4rem 0.9rem; border-radius: 999px; cursor: pointer; background: var(--card); color: var(--ink-soft); border: 1px solid var(--border); }
-.filter:hover { border-color: var(--accent); color: var(--accent-dark); }
-.filter[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+/* sections */
+section.block{padding:36px 0 0;scroll-margin-top:72px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+h2{font-size:clamp(24px,4vw,30px);font-weight:800;margin:0}
+h2 .num{display:none}
+.summary p{margin:0;font-size:17px;color:var(--fg)}
+.summary{border-left:4px solid var(--lime)}
 
-/* Timeline */
-.gantt { margin-bottom: 1rem; padding: 1.1rem 1.25rem 0.75rem; }
-.gantt-title { font-size: 0.9rem; color: var(--muted); font-weight: 600; margin: 0 0 0.75rem; }
-.g-row { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 12px; height: 28px; cursor: pointer; }
-.g-label { font-size: 0.92rem; color: var(--ink-soft); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.g-track { position: relative; height: 12px; background: var(--surface-2); border-radius: 999px; }
-.g-bar { position: absolute; top: 0; bottom: 0; border-radius: 999px; background: var(--accent); opacity: .85; transition: opacity .2s, transform .2s; }
-.g-row:hover .g-bar, .g-row.hot .g-bar { opacity: 1; transform: scaleY(1.35); }
-.g-row.dim .g-bar { opacity: .18; }
-.g-row.dim .g-label { opacity: .45; }
-.g-axis { display: grid; grid-template-columns: 150px 1fr; gap: 12px; margin-top: 6px; }
-.g-ticks { position: relative; height: 18px; font-size: 0.78rem; color: var(--muted); }
-.g-ticks span { position: absolute; transform: translateX(-50%); }
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.skill-group h3{margin:0 0 12px;font-size:17px;font-weight:700;display:flex;align-items:center;gap:10px}
+.skill-group h3 .dot{width:10px;height:10px;border-radius:3px;background:var(--brand-text)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
+.tag.key{background:var(--brand-soft);color:var(--brand-text);border-color:transparent}
 
-/* Jobs */
-.jobs { display: grid; gap: 1rem; }
-.job { scroll-margin-top: calc(var(--nav-h) + 40px); }
-.job:hover, .job.hot { border-color: var(--accent); box-shadow: 0 8px 20px rgba(28,36,32,0.08); }
-.job.dim { opacity: .35; }
-.job-head { display: flex; justify-content: space-between; gap: 6px 16px; flex-wrap: wrap; }
-.job h3 { margin: 0; font-size: 1.2rem; }
-.job .org { color: var(--accent-dark); font-weight: 700; }
-.job .where { color: var(--muted); font-weight: 600; }
-.job .dates { font-family: var(--font-head); font-size: 0.85rem; font-weight: 700; color: var(--accent-dark); background: var(--accent-soft); border-radius: 999px; padding: 3px 11px; height: fit-content; white-space: nowrap; }
-.job ul { margin: 0.75rem 0 0; padding-left: 1.15rem; color: var(--ink-soft); }
-.job li { margin: 0.2rem 0; }
-.job li::marker { color: var(--accent); }
-.job .note { margin: 0.5rem 0 0; font-size: 0.92rem; color: var(--muted); font-style: italic; }
-.job .more { display: none; }
-.job.open .more { display: list-item; }
-.toggle { margin-top: 0.6rem; font-family: var(--font-head); font-size: 0.9rem; font-weight: 700; color: var(--accent-dark); background: none; border: 0; padding: 0; cursor: pointer; }
-.job .tags { margin-top: 0.75rem; }
+/* filters = app chips */
+.filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;max-width:100%}
+.filters::-webkit-scrollbar{display:none}
+.filter{display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-family:var(--font-body);font-weight:600;font-size:13px;cursor:pointer;white-space:nowrap;color:var(--fg)}
+.filter[aria-pressed="true"]{background:var(--brand-soft);border-color:var(--brand-text);color:var(--brand-text)}
 
-/* Credentials */
-.two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.cred { display: flex; gap: 16px; align-items: flex-start; }
-.cred-icon { flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--accent-soft); color: var(--accent-dark); display: grid; place-items: center; }
-.cred-icon svg { width: 22px; height: 22px; }
-.cred h3 { margin: 0; font-size: 1.12rem; }
-.cred .org { color: var(--ink-soft); }
-.cred .dates { color: var(--accent-dark); font-size: 0.92rem; font-weight: 700; }
-.stack { display: grid; gap: 1rem; }
+/* timeline */
+.gantt{margin-bottom:12px}
+.gantt-title{font-size:13px;color:var(--muted);font-weight:600;margin:0 0 12px}
+.g-row{display:grid;grid-template-columns:120px 1fr;align-items:center;gap:12px;height:30px;cursor:pointer}
+.g-label{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g-track{position:relative;height:12px;background:var(--surface2);border-radius:999px}
+.g-bar{position:absolute;top:0;bottom:0;border-radius:999px;background:var(--brand);transition:opacity .2s,transform .2s,background .2s}
+.g-row:hover .g-bar,.g-row.hot .g-bar{background:var(--lime);transform:scaleY(1.3)}
+.g-row.dim .g-bar{opacity:.2}
+.g-row.dim .g-label{opacity:.45}
+.g-axis{display:grid;grid-template-columns:120px 1fr;gap:12px;margin-top:6px}
+.g-ticks{position:relative;height:18px;font-size:11px;color:var(--muted)}
+.g-ticks span{position:absolute;transform:translateX(-50%)}
 
-/* CTA band + footer */
-.cta-band { margin-top: 2.5rem; background: var(--accent-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
-.cta-band h2 { font-size: 1.4rem; }
-.cta-band p { margin: 0.25rem 0 0; color: var(--ink-soft); }
-.footer { margin-top: 4rem; background: var(--ink); color: #dfe6e1; padding: 2.5rem 0 2rem; }
-.footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
-.footer a { color: #fff; }
-.footer img { height: 34px; width: auto; display: block; }
-.footer p { margin: 0.5rem 0 0; font-size: 0.97rem; }
+/* jobs */
+.jobs{display:grid;gap:12px}
+.job{transition:opacity .25s,border-color .2s;scroll-margin-top:90px}
+.job:hover,.job.hot{border-color:var(--brand-text)}
+.job.dim{opacity:.35}
+.job-head{display:flex;justify-content:space-between;gap:6px 16px;flex-wrap:wrap}
+.job h3{margin:0;font-size:19px;font-weight:700}
+.job .org{color:var(--brand-text);font-weight:700;font-size:15px}
+.job .where{color:var(--muted);font-weight:500}
+.job .dates{font-size:12px;font-weight:700;color:var(--brand-text);background:var(--brand-soft);border-radius:999px;padding:4px 10px;height:fit-content;white-space:nowrap;font-variant-numeric:tabular-nums}
+.job ul{margin:12px 0 0;padding-left:18px}
+.job li{margin:4px 0}
+.job li::marker{color:var(--brand-text)}
+.job .note{margin:8px 0 0;font-size:13px;color:var(--muted);font-style:italic}
+.job .more{display:none}
+.job.open .more{display:list-item}
+.toggle{margin-top:10px;font:inherit;font-size:14px;font-weight:700;color:var(--brand-text);background:none;border:0;padding:0;cursor:pointer}
+.job .tags{margin-top:12px}
 
-.print-only { display: none; }
+/* credentials */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cred{display:flex;gap:14px;align-items:flex-start}
+.cred-icon{flex:none;width:44px;height:44px;border-radius:12px;background:var(--brand-soft);color:var(--brand-text);display:grid;place-items:center}
+.cred-icon svg{width:22px;height:22px}
+.cred h3{margin:0;font-size:17px}
+.cred .org{color:var(--muted);font-size:14px}
+.cred .dates{color:var(--brand-text);font-size:13px;font-weight:700}
+.stack{display:grid;gap:12px}
 
-@media (max-width: 899px) {
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .nav a { padding: 0.45rem 0.6rem; }
+/* CTA hero + footer */
+.cta-hero{margin-top:36px}
+.cta-hero h2{color:#fff;position:relative}
+.cta-hero p{position:relative;color:#bfe6d3;margin:6px 0 18px}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:28px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.foot a{text-decoration:none;color:var(--fg)}
+
+/* bottom nav (like the app) */
+.bnav{position:fixed;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:60;width:calc(100% - 24px);max-width:620px;
+  background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:6px}
+.bnav-in{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
+.bnav a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;border-radius:20px;text-decoration:none;color:var(--muted);font-size:12px;font-weight:600}
+.bnav a svg{width:22px;height:22px}
+.bnav a.active,.bnav a:hover{background:var(--brand-soft);color:var(--brand-text)}
+
+.print-only{display:none}
+
+@media (max-width:760px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .skills,.two{grid-template-columns:1fr}
+  .g-row,.g-axis{grid-template-columns:92px 1fr}
+  .hero{padding:28px 22px}
+  .hero svg.art{width:200px;height:200px}
+  .cta .btn{flex:1 1 100%}
+  .bnav a{font-size:11px}
+  .hide-sm{display:none}
 }
-@media (max-width: 760px) {
-  .skills, .two { grid-template-columns: 1fr; }
-  .g-row, .g-axis { grid-template-columns: 96px 1fr; }
-}
-@media (max-width: 699px) {
-  body { font-size: 1rem; }
-  .nav { display: none; }
-  .topbar { padding: 0.4rem 0.45rem 0.4rem 0.6rem; min-height: 56px; }
-  .hero { padding-top: calc(56px + 2.5rem); }
-  .cta .btn { flex: 1 1 100%; }
-}
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none !important}}
 
-/* ---------- Print / PDF ---------- */
-@page { size: Letter; margin: 0.45in 0.55in; }
-@media print {
-  body { font-size: 10.5pt; line-height: 1.3; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .no-print, .topbar, .stats, .gantt, .filters, .toggle, .cta-band, .footer, .hero .cta, .job .tags { display: none !important; }
-  .print-only { display: inline-flex !important; }
-  .wrap { max-width: none; padding: 0; }
-  .hero { padding: 0 0 8pt; border-bottom: 2pt solid var(--accent); }
-  .eyebrow { font-size: 9pt; margin: 0 0 2pt; }
-  .hero h1 { font-size: 26pt; margin: 0 0 4pt; }
-  .hero .lede { display: none; }
-  .contact { margin: 0; gap: 0 14pt; }
-  .chip-link { padding: 0; border: 0; background: none; color: var(--ink-soft); font-size: 10pt; font-weight: 600; }
-  .chip-link svg { width: 10pt; height: 10pt; }
-  section.block { padding: 10pt 0 0; }
-  .section-head { margin-bottom: 5pt; }
-  h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: .08em; color: var(--accent-dark); border-bottom: 1px solid var(--border); padding-bottom: 2pt; width: 100%; }
-  h2 .num { display: none; }
-  .card { border: 0; padding: 0; border-radius: 0; box-shadow: none; }
-  .summary { border-left: 0; }
-  .summary p { font-size: 10.5pt; }
-  .skills { grid-template-columns: 1fr; gap: 2pt; }
-  .skill-group { display: flex; gap: 6pt; }
-  .skill-group h3 { flex: none; width: 1.75in; margin: 0; font-size: 10pt; }
-  .skill-group h3 .dot { display: none; }
-  .skill-group .tags { display: block; }
-  .skill-group .tag { display: inline; padding: 0; border: 0; background: none; font-size: 10pt; color: var(--ink-soft); font-weight: 400; }
-  .skill-group .tag.key { font-weight: 700; color: var(--ink); }
-  .skill-group .tag + .tag::before { content: " \00b7  "; color: var(--accent); font-weight: 700; }
-  .jobs { gap: 8pt; }
-  .job { opacity: 1 !important; break-inside: avoid; }
-  .job h3 { font-size: 11pt; }
-  .job .org { font-size: 10pt; }
-  .job .dates { font-size: 9pt; padding: 0; background: none; color: var(--ink-soft); }
-  .job ul { margin: 3pt 0 0; padding-left: 13pt; }
-  .job li { margin: 1pt 0; }
-  .job .more { display: list-item !important; }
-  .job .note { font-size: 9pt; margin: 2pt 0 0; }
-  .two { gap: 8pt 18pt; }
-  .stack { gap: 6pt; }
-  .cred { gap: 8pt; break-inside: avoid; }
-  .cred-icon { width: 22pt; height: 22pt; border-radius: 6pt; }
-  .cred-icon svg { width: 12pt; height: 12pt; }
-  .cred h3 { font-size: 10.5pt; }
-  .cred .org, .cred .dates { font-size: 9.5pt; }
-  a { text-decoration: none; }
+/* ---------- Print ---------- */
+@page{size:Letter;margin:.45in .55in}
+@media print{
+  :root,:root[data-theme="dark"]{--bg:#fff;--surface:#fff;--surface2:#eef3ef;--line:#d3ddd6;--fg:#0e1a14;--muted:#56675d;--brand-text:#047857;--brand-soft:#d6f0e3;--shadow:none;color-scheme:light}
+  body{font-size:10pt;line-height:1.32;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .top,.bnav,.stats,.gantt,.filters,.toggle,.cta-hero,.foot,.hero .cta,.hero .art,.job .tags,.no-print{display:none !important}
+  .print-only{display:inline-flex !important}
+  main{padding:0}
+  .wrap{max-width:none;padding:0}
+  .hero{background:none;color:var(--fg);border-radius:0;padding:0 0 8pt;border-bottom:2pt solid var(--brand-text)}
+  .hero .eyebrow{color:var(--brand-text)}
+  .hero h1{color:var(--fg);font-size:26pt;margin:0 0 4pt}
+  .hero h1 .lime{color:var(--brand-text)}
+  .hero .lede{display:none}
+  .contact{margin:0;gap:0 14pt}
+  .chip-link{padding:0;border:0;background:none;color:var(--fg);font-size:9.5pt}
+  .chip-link svg{color:var(--brand-text)}
+  section.block{padding:10pt 0 0}
+  h2{font-size:11pt;text-transform:uppercase;letter-spacing:.1em;color:var(--brand-text);border-bottom:1px solid var(--line);padding-bottom:2pt;width:100%}
+  .card{border:0;padding:0;border-radius:0;box-shadow:none}
+  .summary{border:0}
+  .job{opacity:1 !important;break-inside:avoid}
+  .job .more{display:list-item !important}
+  .job .dates{background:none;padding:0}
 }
 </style>
+<script>(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="mark" viewBox="0 0 48 48">
+    <rect width="48" height="48" rx="13" fill="#047857"/>
+    <path d="M24 7l3.4 10.2L38 20.5l-10.6 3.3L24 34l-3.4-10.2L10 20.5l10.6-3.3z" fill="#ffffff"/>
+    <path d="M38 5l1.3 3.7L43 10l-3.7 1.3L38 15l-1.3-3.7L33 10l3.7-1.3z" fill="#ccff00"/>
+    <path d="M9 41c9-4 21-4 30 0" stroke="#ccff00" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  </symbol>
+  <symbol id="art" viewBox="0 0 200 200"><path d="M100 10l22 68 68 22-68 22-22 68-22-68-68-22 68-22z" stroke="#1d7a58" stroke-width="2" fill="none"/><path d="M100 42l13 45 45 13-45 13-13 45-13-45-45-13 45-13z" fill="#0b3b2a"/><path d="M165 20l5 14 14 5-14 5-5 14-5-14-14-5 14-5z" fill="#ccff00"/></symbol>
+</defs></svg>
 
-<header class="topbar no-print">
-  <a class="brand" href="#top"><img src="bish-mark.png" alt="" width="34" height="34">Bob Bishop</a>
-  <nav class="nav" aria-label="Sections">
-    <a href="#summary">Summary</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#education">Education</a>
-  </nav>
-  <a class="btn btn-sm" href="Bob_Bishop_Resume.pdf" download>Download PDF</a>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#top" aria-label="Back to top"><svg class="mark"><use href="#mark"/></svg><span class="wm">Bob<em>Bishop</em></span></a>
+    <div class="top-r">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme"></button>
+      <a class="icon-btn" href="Bob_Bishop_Resume.pdf" download aria-label="Download PDF" title="Download PDF"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg></a>
+      <a class="avatar" href="https://bishcleanup.com/" title="Bish Cleanup">BB</a>
+    </div>
+  </div>
 </header>
 
 <main id="top">
-  <div class="hero">
-    <div class="wrap">
+  <div class="wrap">
+    <div class="hero">
+      <svg class="art" aria-hidden="true"><use href="#art"/></svg>
       <p class="eyebrow">Property &amp; Operations Manager</p>
-      <h1>Bob <span class="hl">Bishop</span></h1>
+      <h1>Bob <span class="lime">Bishop.</span></h1>
       <p class="lede">I keep properties, teams and day-to-day operations running smoothly, from tenant screening and rent collection to maintenance, vendors and the people who make it all work.</p>
       <div class="contact">
         <span class="chip-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Chehalis, WA 98532</span>
-        <a class="chip-link" href="tel:+13602615614"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(360) 261-5614</a>
         <a class="chip-link" href="mailto:Bob@BishCleanup.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Bob@BishCleanup.com</a>
-        <a class="chip-link print-only" href="https://resume.bishcleanup.com/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>resume.bishcleanup.com</a>
+        <a class="chip-link print-only" href="tel:+13602615614">(360) 261-5614</a>
+        <a class="chip-link print-only" href="https://resume.bishcleanup.com/">resume.bishcleanup.com</a>
       </div>
       <div class="cta">
-        <a class="btn" href="Bob_Bishop_Resume.pdf" download>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download PDF
-        </a>
-        <a class="btn btn-ghost" href="mailto:Bob@BishCleanup.com?subject=Opportunity%20for%20Bob%20Bishop">Get in touch</a>
-        <a class="btn btn-ghost" href="bob-bishop.vcf" download>Save contact</a>
+        <a class="btn lime" href="Bob_Bishop_Resume.pdf" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download resume</a>
+        <a class="btn ghost" href="tel:+13602615614"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call now</a>
+        <a class="btn ghost" href="sms:+13602615614"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg>Text now</a>
+        <a class="btn ghost" href="bob-bishop.vcf" download><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Save contact</a>
       </div>
     </div>
-  </div>
 
-  <div class="wrap">
-    <div class="stats no-print" aria-label="Highlights">
-      <div class="stat"><b>9+ yrs</b><span>Property &amp; operations leadership</span></div>
-      <div class="stat"><b>Yardi &amp; AppFolio</b><span>Property management platforms</span></div>
-      <div class="stat"><b>7 roles</b><span>Across 4 industries</span></div>
-      <div class="stat"><b>2026</b><span>Business Consultant Certificate</span></div>
+    <div class="stats" aria-label="Highlights">
+      <div class="card stat"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></span><b>9+ years</b><span>Property &amp; operations leadership</span></div>
+      <div class="card stat"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></span><b>Yardi &amp; AppFolio</b><span>Property management platforms</span></div>
+      <div class="card stat"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span><b>7 roles</b><span>Across 4 industries</span></div>
+      <div class="card stat"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg></span><b>Certified 2026</b><span>Business Consultant Certificate</span></div>
     </div>
 
     <section class="block" id="summary">
-      <div class="section-head"><h2><span class="num">01</span>Professional Summary</h2></div>
+      <div class="section-head"><h2><span class="num" hidden>01</span>Professional Summary</h2></div>
       <div class="card summary">
         <p>Property and operations manager with 9+ years of experience running residential properties, leading teams and managing daily operations. Hands-on with Yardi Voyager and AppFolio for tenant screening, rent collection and lease administration. Known for coordinating maintenance and vendors, training staff, controlling costs and delivering dependable service across property management, hospitality, travel services and logistics. Recently earned a Business Consultant Certificate, adding structured business analysis to a practical operations background.</p>
       </div>
     </section>
 
     <section class="block" id="skills">
-      <div class="section-head"><h2><span class="num">02</span>Core Skills</h2></div>
+      <div class="section-head"><h2><span class="num" hidden>02</span>Core Skills</h2></div>
       <div class="skills">
         <div class="card skill-group">
           <h3><span class="dot" aria-hidden="true"></span>Property Management</h3>
@@ -335,7 +317,7 @@ h2 .num { display: inline-grid; place-items: center; width: 34px; height: 34px; 
 
     <section class="block" id="experience">
       <div class="section-head">
-        <h2><span class="num">03</span>Professional Experience</h2>
+        <h2><span class="num" hidden>03</span>Professional Experience</h2>
         <div class="filters" role="group" aria-label="Filter experience">
           <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
           <button class="filter" type="button" data-filter="property" aria-pressed="false">Property</button>
@@ -459,7 +441,7 @@ h2 .num { display: inline-grid; place-items: center; width: 34px; height: 34px; 
 
     <div class="two">
       <section class="block" id="certifications">
-        <div class="section-head"><h2><span class="num">04</span>Certifications &amp; Licenses</h2></div>
+        <div class="section-head"><h2><span class="num" hidden>04</span>Certifications &amp; Licenses</h2></div>
         <div class="stack">
           <div class="card cred">
             <div class="cred-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg></div>
@@ -479,7 +461,7 @@ h2 .num { display: inline-grid; place-items: center; width: 34px; height: 34px; 
       </section>
 
       <section class="block" id="education">
-        <div class="section-head"><h2><span class="num">05</span>Education</h2></div>
+        <div class="section-head"><h2><span class="num" hidden>05</span>Education</h2></div>
         <div class="stack">
           <div class="card cred">
             <div class="cred-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
@@ -493,31 +475,42 @@ h2 .num { display: inline-grid; place-items: center; width: 34px; height: 34px; 
       </section>
     </div>
 
-    <div class="cta-band no-print">
-      <div>
-        <h2>Let's talk.</h2>
-        <p>Open to property management and operations roles in Southwest Washington and remote.</p>
-      </div>
+    <div class="hero cta-hero">
+      <svg class="art" aria-hidden="true"><use href="#art"/></svg>
+      <p class="eyebrow">Get in touch</p>
+      <h2>Let's work <span style="color:var(--lime)">together.</span></h2>
+      <p>Open to property management and operations roles in Southwest Washington and remote.</p>
       <div class="cta">
-        <a class="btn" href="tel:+13602615614">Call (360) 261-5614</a>
-        <a class="btn btn-ghost" href="Bob_Bishop_Resume.pdf" download>Download PDF</a>
+        <a class="btn lime" href="tel:+13602615614">Call (360) 261-5614</a>
+        <a class="btn ghost" href="mailto:Bob@BishCleanup.com?subject=Opportunity%20for%20Bob%20Bishop">Email Bob</a>
+        <a class="btn ghost" href="Bob_Bishop_Resume.pdf" download>Download PDF</a>
       </div>
+    </div>
+
+    <div class="foot">
+      <a class="brand" href="https://bishcleanup.com/"><svg class="mark"><use href="#mark"/></svg><span class="wm">Bish<em>Cleanup</em></span></a>
+      <span>Bob Bishop · Chehalis, WA · <a href="mailto:Bob@BishCleanup.com">Bob@BishCleanup.com</a></span>
     </div>
   </div>
 </main>
 
-<footer class="footer no-print">
-  <div class="wrap">
-    <div>
-      <a href="https://bishcleanup.com/" aria-label="Bish Cleanup"><img src="bish-logo-light.png" alt="Bish Cleanup" width="163" height="34"></a>
-      <p>Bob Bishop · Chehalis, WA · <a href="mailto:Bob@BishCleanup.com">Bob@BishCleanup.com</a></p>
-    </div>
-    <p><a href="https://bishcleanup.com/">bishcleanup.com</a></p>
-  </div>
-</footer>
+<nav class="bnav" aria-label="Sections"><div class="bnav-in"><a href="#summary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Summary</span></a><a href="#skills"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.6 1.6 7L12 17.6 5.7 21.2l1.6-7L2 9.6 9 9z"/></svg><span>Skills</span></a><a href="#experience"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><span>Work</span></a><a href="#certifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg><span>Certs</span></a><a href="#education"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><span>School</span></a></div></nav>
 
 <script>
 (function () {
+  // Theme toggle (same behaviour as the Bish Cleanup app)
+  var root = document.documentElement, themeBtn = document.getElementById('themeBtn');
+  var SUN = '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>', MOON = '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+  function isDark() { var t = root.getAttribute('data-theme'); return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; }
+  function paint() { themeBtn.innerHTML = isDark() ? SUN : MOON; }
+  themeBtn.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    paint();
+  });
+  paint();
+
   // Show more / less
   document.querySelectorAll('.job .toggle').forEach(function (btn) {
     var label = btn.textContent;
@@ -576,7 +569,7 @@ h2 .num { display: inline-grid; place-items: center; width: 34px; height: 34px; 
   });
 
   // Active nav link
-  var links = document.querySelectorAll('.nav a');
+  var links = document.querySelectorAll('.bnav a');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
