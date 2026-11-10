@@ -89,6 +89,7 @@ main{padding:20px 0 120px}
 .hero{position:relative;overflow:hidden;border-radius:26px;padding:32px 28px;background:var(--hero);color:#fff}
 .hero svg.art{position:absolute;right:-40px;top:-40px;width:260px;height:260px;opacity:.9;pointer-events:none}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-text);margin:0 0 6px}
+.hero .photo{position:absolute;right:32px;top:32px;width:184px;height:184px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.14);box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .hero .eyebrow{color:var(--lime);position:relative}
 .hero h1{position:relative;font-size:clamp(38px,8vw,56px);font-weight:800;line-height:1.02;margin:0 0 12px;color:#fff}
 .hero h1 .lime{color:var(--lime)}
@@ -193,6 +194,7 @@ h2 .num{display:none}
   .skills,.two{grid-template-columns:1fr}
   .g-row,.g-axis{grid-template-columns:92px 1fr}
   .hero{padding:28px 22px}
+  .hero .photo{position:static;display:block;width:104px;height:104px;margin-bottom:18px}
   .hero svg.art{width:200px;height:200px}
   .cta .btn{flex:1 1 100%}
   .bnav a{font-size:11px}
@@ -205,7 +207,7 @@ h2 .num{display:none}
 @media print{
   :root,:root[data-theme="dark"]{--bg:#fff;--surface:#fff;--surface2:#eef3ef;--line:#d3ddd6;--fg:#0e1a14;--muted:#56675d;--brand-text:#047857;--brand-soft:#d6f0e3;--shadow:none;color-scheme:light}
   body{font-size:10pt;line-height:1.32;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .top,.bnav,.stats,.gantt,.filters,.toggle,.cta-hero,.foot,.hero .cta,.hero .art,.job .tags,.no-print{display:none !important}
+  .hero .photo,.top,.bnav,.stats,.gantt,.filters,.toggle,.cta-hero,.foot,.hero .cta,.hero .art,.job .tags,.no-print{display:none !important}
   .print-only{display:inline-flex !important}
   main{padding:0}
   .wrap{max-width:none;padding:0}
@@ -242,6 +244,7 @@ h2 .num{display:none}
 <main id="top">
   <div class="wrap">
     <div class="hero">
+      <img class="photo" src="bob-photo.jpg" alt="Bob Bishop" width="320" height="320">
       <p class="eyebrow">Property &amp; Operations Manager</p>
       <h1>Bob Bishop</h1>
       <p class="lede">I keep properties, teams and day-to-day operations running smoothly, from tenant screening and rent collection to maintenance, vendors and the people who make it all work.</p>
