@@ -20,7 +20,7 @@ export default {
     if (pathname === '/Bob_Bishop_Resume_1page.pdf') return Response.redirect(new URL('/Bob_Bishop_Resume.pdf', request.url).toString(), 301);
     const f = FILES[pathname];
     if (!f) return Response.redirect(new URL('/', request.url).toString(), 302);
-    const headers = { 'content-type': f[1], 'cache-control': 'public, max-age=300', 'x-content-type-options': 'nosniff' };
+    const headers = { 'content-type': f[1], 'cache-control': 'no-cache', 'x-content-type-options': 'nosniff' };
     if (f[2]) headers['content-disposition'] = f[2];
     return new Response(f[0], { headers });
   },
