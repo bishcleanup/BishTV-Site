@@ -1,8 +1,10 @@
 # Resume site: resume.bishcleanup.com
 
-- `public/index.html`: the resume. It's interactive on screen, and its print styles produce the PDF.
-- `public/one-page.html`: condensed 1-page print layout.
-- `build-pdf.js`: regenerates both PDFs, `Bob_Bishop_Resume.pdf` (2 pages) and `Bob_Bishop_Resume_1page.pdf` (`node build-pdf.js`, needs Playwright). It warns if the 1-page version overflows.
+Styled to match bishcleanup.com (Archivo + Source Sans 3, forest green #1f7a4d, Bish Cleanup logo).
+
+- `public/index.html`: the interactive resume website.
+- `public/one-page.html`: the 1-page print layout used for the PDF.
+- `build-pdf.js`: builds `public/Bob_Bishop_Resume.pdf` from `one-page.html` (`node build-pdf.js`, needs Playwright). Fails if the content no longer fits on one page.
 - `worker.js` + `wrangler.jsonc`: Cloudflare Worker `bishcleanup-resume` serving the files on resume.bishcleanup.com.
 
-To update: edit `public/index.html` and/or `public/one-page.html`, run `node build-pdf.js`, then `npx wrangler deploy` from this folder.
+To update: edit the HTML, run `node build-pdf.js`, then `npx wrangler deploy` from this folder.
