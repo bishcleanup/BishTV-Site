@@ -1,3 +1,45 @@
+# Allow all crawlers, including search, Google Ads, and AI crawlers.
+
+# Google Ads / AdSense crawlers (these ignore the * group, so they must be named)
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+# Google AI (Gemini / Vertex AI)
+User-agent: Google-Extended
+Allow: /
+
+# Other AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Everyone else
 User-agent: *
 Allow: /
 
