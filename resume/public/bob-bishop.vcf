@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Bishop;Bob;;;
+FN:Bob Bishop
+TITLE:Property & Operations Manager
+TEL;TYPE=CELL:+1-360-261-5614
+EMAIL;TYPE=INTERNET:Bob@BishCleanup.com
+ADR;TYPE=HOME:;;;Chehalis;WA;98532;USA
+URL:https://resume.bishcleanup.com/
+END:VCARD
