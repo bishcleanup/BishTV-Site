@@ -1,6 +1,6 @@
 # Resume site: resume.bishcleanup.com
 
-Styled to match the Bish Cleanup app at bishcleanup.com: Bricolage Grotesque + Figtree, emerald #047857 with lime #ccff00, star mark, light/dark toggle.
+Styled to match the Bish Cleanup app at bishcleanup.com: Bricolage Grotesque + Figtree, emerald #047857 with lime #ccff00, dark mode only.
 
 - `public/index.html`: the interactive resume website.
 - `public/one-page.html`: the 1-page print layout used for the PDF.
