@@ -1,6 +1,7 @@
 // Serves the resume site. Files are bundled into the Worker as modules.
 import html from './public/index.html';
 import pdf from './public/Bob_Bishop_Resume.pdf';
+import pdf1 from './public/Bob_Bishop_Resume_1page.pdf';
 import vcf from './public/bob-bishop.vcf';
 import robots from './public/robots.txt';
 
@@ -8,6 +9,7 @@ const FILES = {
   '/': [html, 'text/html; charset=utf-8'],
   '/index.html': [html, 'text/html; charset=utf-8'],
   '/Bob_Bishop_Resume.pdf': [pdf, 'application/pdf', 'inline; filename="Bob_Bishop_Resume.pdf"'],
+  '/Bob_Bishop_Resume_1page.pdf': [pdf1, 'application/pdf', 'inline; filename="Bob_Bishop_Resume_1page.pdf"'],
   '/bob-bishop.vcf': [vcf, 'text/vcard; charset=utf-8', 'attachment; filename="bob-bishop.vcf"'],
   '/robots.txt': [robots, 'text/plain; charset=utf-8'],
 };
